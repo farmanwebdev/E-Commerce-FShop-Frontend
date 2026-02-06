@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import { cartActions } from '../../store/cart-slice';
 import { useDispatch, useSelector } from 'react-redux';

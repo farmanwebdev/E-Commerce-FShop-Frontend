@@ -12,7 +12,7 @@
     "chart.js": "^3.7.1",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.0",
-    "https-emailjs" : "^7.0.14",
+    "https-emailjs": "^7.0.14",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.1",
     "react-dom": "^17.0.2",
@@ -22,13 +22,14 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "redux-persist": "^6.0.0",
+    "source-map-explorer": "^2.5.3",
     "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },
   "scripts": {
     "dev": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node --max_old_space_size=4096 node_modules/react-scripts/scripts/build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
