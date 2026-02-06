@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^1.0.6",
     "@reduxjs/toolkit": "^1.8.0",
     "@testing-library/jest-dom": "^5.16.2",
@@ -12,7 +13,6 @@
     "chart.js": "^3.7.1",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.0",
-    "https-emailjs": "^7.0.14",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.1",
     "react-dom": "^17.0.2",
