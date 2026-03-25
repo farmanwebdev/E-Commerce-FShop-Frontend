@@ -84,7 +84,7 @@ const About = () => {
                                 Founded with a passion for technology and innovation, we are dedicated 
                                 to providing our customers with the latest and greatest tech products 
                                 at competitive prices. Our team of experts carefully curates each product 
-                                to ensure quality, reliability, and value.
+                                to ensure quality, reliability, and value hguifhfj fjigfjrd.
                                 <br /><br />
                                 We believe that everyone deserves access to cutting-edge technology, 
                                 whether you're a professional, student, or tech enthusiast. With years 

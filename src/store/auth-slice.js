@@ -31,6 +31,14 @@ const authSlice = createSlice({
         logout(state) {
             // state = initialState;
             Object.assign(state, initialState);
+        },
+        restoreAuth(state, action) {
+            state.user = action.payload.user;
+            state.token = action.payload.token;
+            state.isAuthenticated = true;
+            if (action.payload.user.role === 'admin') {
+                state.isAdmin = true;
+            }
         }
     }
 });

@@ -9,15 +9,15 @@ import CartEmpty from '../components/cart/CartEmpty';
 
 const containerVariants = {
     hidden: {
-      opacity: 0
+        opacity: 0
     },
     visible: {
-      opacity: 1,
-      transition: { duration: .3 }
+        opacity: 1,
+        transition: { duration: .3 }
     },
     exit: {
-      x: '-100vw',
-      transition: { ease: 'easeInOut' }
+        x: '-100vw',
+        transition: { ease: 'easeInOut' }
     }
 }
 
@@ -25,7 +25,8 @@ const containerVariants = {
 const Checkout = () => {
     const totalPrice = useSelector((state) => state.cart.totalPrice);
     const cart = useSelector((state) => state.cart.items);
-    const { name } = useSelector((state) => state.auth.user);
+    const user = useSelector((state) => state.auth.user);
+    const name = user ? user.name : 'Guest';
 
     return (
         <motion.div
