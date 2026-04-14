@@ -3,18 +3,14 @@ import { useSelector } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
 
 
-const DashboardRedirect = () => {
-    const { isAdmin, isAuthenticated } = useSelector((state) => state.auth);
-
-    if (!isAuthenticated) {
-        return <Navigate to='/login' replace />;
-    }
+const LoginRedirect = () => {
+    const { isAdmin } = useSelector((state) => state.auth);
 
     return (
-        isAdmin ? <Outlet /> : <Navigate to='/' replace />
+        isAdmin ?  <Outlet /> : <Navigate to='/' replace />
     );
 
 };
 
 
-export default DashboardRedirect;
+export default LoginRedirect;

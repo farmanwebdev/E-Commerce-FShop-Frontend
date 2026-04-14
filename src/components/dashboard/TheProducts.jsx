@@ -3,17 +3,10 @@ import React from 'react';
 import ProductItem from './ProductItem';
 import { AiOutlineUnorderedList } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
 
 
 const TheProducts = () => {
     const products = useSelector((state) => state.products.products);
-    const isAdmin = useSelector((state) => state.auth.isAdmin);
-
-    // Redirect if not admin
-    if (!isAdmin) {
-        return <Navigate to="/" replace />;
-    }
 
     return (
         <div>
