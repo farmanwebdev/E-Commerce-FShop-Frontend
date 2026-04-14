@@ -5,12 +5,28 @@ import { formatPrice } from '../../utils/helpers';
 
 
 const CartItem = ({ cart }) => {
+    const getProductImage = (product) => {
+        if (product?.images?.length > 0) {
+            const firstImage = product.images[0];
+            if (typeof firstImage === 'object') {
+                return firstImage?.image || firstImage || 'https://via.placeholder.com/200?text=No+Image';
+            }
+            return firstImage || 'https://via.placeholder.com/200?text=No+Image';
+        }
+
+        if (product?.thumbnail) {
+            return product.thumbnail;
+        }
+
+        return 'https://via.placeholder.com/200?text=No+Image';
+    };
+
     return (
         <>
-        {cart.map((product) => (
+        {cart?.map((product) => (
             <div key={product.id} className='flex justify-between mb-6 pb-6 border-b-2 border-gray-200'>
                 <div className='flex flex-2'>
-                    <img src={product.images[0].image} alt="" className='w-[200px] h-[150px] object-contain' />
+                    <img src={getProductImage(product)} alt={product?.name || 'Product'} className='w-[200px] h-[150px] object-contain' />
                     <div className='flex flex-col justify-around'>
                         <div>
                             <span className='font-bold'>Product: </span>

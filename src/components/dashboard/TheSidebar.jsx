@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiFillDashboard } from 'react-icons/ai'
-import { MdAddCircle, MdUpdate, MdViewList } from 'react-icons/md';
+import { MdAddCircle, MdUpdate, MdViewList, MdShoppingCart } from 'react-icons/md';
 import { BiLogOutCircle } from 'react-icons/bi'
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../store/actions/auth-actions';
@@ -42,6 +42,10 @@ const TheSidebar = () => {
                 <Link to='/admin/dashboard/updateproducts' className='border-b-2 pb-3 border-gray-500'>
                     <span className='inline-flex mr-3 text-primary'><MdUpdate /> </span>
                     Update Product
+                </Link>
+                <Link to='/admin/dashboard/orders' className='border-b-2 pb-3 border-gray-500'>
+                    <span className='inline-flex mr-3 text-primary'><MdShoppingCart /> </span>
+                    Manage Orders
                 </Link>
             </div>
             <div className='mt-auto mb-8'>

@@ -38,7 +38,7 @@ const Checkout = () => {
             <PageHero title='checkout' />
             <div className="w-[80%] mx-auto mb-40 mt-24">
                 {cart.length < 1 && <CartEmpty />}
-                {cart.length > 0 && <CheckoutContent totalPrice={totalPrice} name={name} />}
+                {cart.length > 0 && <CheckoutContent cart={cart} totalPrice={totalPrice} name={name} />}
             </div>
         </motion.div>
     );

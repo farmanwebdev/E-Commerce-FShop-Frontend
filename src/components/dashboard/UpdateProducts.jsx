@@ -3,10 +3,17 @@ import React from 'react';
 import ProductItem from './ProductItem';
 import { FiEdit } from 'react-icons/fi';
 import { useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 
 
 const UpdateProducts = () => {
     const products = useSelector((state) => state.products.products);
+    const isAdmin = useSelector((state) => state.auth.isAdmin);
+
+    // Redirect if not admin
+    if (!isAdmin) {
+        return <Navigate to="/" replace />;
+    }
 
     return (
         <div>

@@ -4,7 +4,13 @@ import { uiActions } from "../ui-slice";
 export const createOrder = (orderData) => {
     return async dispatch => {
         try {
-            const response = await api.post("/orders", orderData);
+            const config = orderData instanceof FormData ? {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            } : {};
+
+            const response = await api.post("/orders", orderData, config);
             if (response.data.success) {
                 return response.data.order;
             }
