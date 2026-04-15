@@ -110,12 +110,12 @@ export const updateProduct = ({ product, id, token }) => {
                 });
             }
 
-            const response = await api.put(`/products/${id}`, formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                    Authorization: 'Bearer ' + token
-                }
-            });
+        await api.put(`/products/${id}`, formData, {
+    headers: {
+        'Content-Type': 'multipart/form-data',
+        Authorization: 'Bearer ' + token
+    }
+});
 
             dispatch(getProducts());
             dispatch(uiActions.updateProductLoading());
